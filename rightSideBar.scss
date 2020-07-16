@@ -1,0 +1,200 @@
+@import "base";
+@import "prefixer";
+@import "node_modules/@housing/slider/dist/slider";
+
+.su-card {
+  position: relative;
+  display: block;
+  background: $white;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 20px 60px 20px 20px;
+  box-sizing: border-box;
+  position: relative;
+  .su-card-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .su-card-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 10px;
+  }
+
+  .su-card-subtext {
+    font-size: 14px;
+    color: $black60;
+    line-height: 1.5em;
+    margin-bottom: 16px;
+  }
+
+  .su-card-link {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .add-property-btn {
+    line-height: 34px;
+    width: 140px;
+  }
+}
+
+.sidebar-card {
+  margin-bottom: 20px;
+  padding: 17px 20px;
+
+  background: $white;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+
+  .sb-title {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .sb-carousel {
+    margin-top: 10px;
+  }
+
+  .sbc-caption,
+  .sbc-thumbnail {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .sbc-caption {
+    width: calc(100% - 100px);
+    color: $white50;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .sbc-thumbnail {
+    width: 100px;
+    height: 85px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.thumbnail-0 {
+      background-image: url(/assets/images/sidebar/list-with-us-0.svg);
+    }
+    &.thumbnail-1 {
+      background-image: url(/assets/images/sidebar/list-with-us-1.svg);
+    }
+  }
+
+  .sbc-controls {
+    margin-top: 10px;
+
+    line-height: 7px;
+    text-align: center;
+  }
+
+  .sbc-control {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+    border: 1px solid $primary;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &.control-selected {
+      background-color: $primary;
+    }
+  }
+
+  .sb-cta {
+    display: block;
+    margin: 20px auto 14px auto;
+
+    width: 170px;
+    height: 36px;
+
+    color: $white;
+    font-weight: 500;
+    line-height: 36px;
+    background-color: $primary;
+    text-align: center;
+    border-radius: 2px;
+  }
+}
+
+.whatsapp {
+  background: $white;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+  padding: 10px 0px 10px 5px;
+}
+.whatsapp-image {
+  background-image: url("/assets/images/whats-app-logo-1@3x.png");
+  height: 23px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.afterImg {
+  padding-left: 28px;
+}
+.text {
+  top: 15px;
+  font-size: 14px;
+  letter-spacing: 0.18px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 25px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #55d6a7;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #c3c5c9;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #c3c5c9;
+}
+
+input:checked + .slider:before {
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
